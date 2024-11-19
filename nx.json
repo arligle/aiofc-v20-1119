@@ -5,7 +5,7 @@
     "production": ["default"],
     "sharedGlobals": []
   },
-  "nxCloudId": "673c217c919aab4e8916a79d",
+  "nxCloudId": "673c28407197872ae86a82cd",
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
