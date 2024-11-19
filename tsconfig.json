@@ -15,6 +15,7 @@
     { "path": "./packages/persistence-api" },
     { "path": "./packages/typeorm-extend" },
     { "path": "./examples/fastify-server-demo" },
-    { "path": "./examples/typeorm-demo" }
+    { "path": "./examples/typeorm-demo" },
+    { "path": "./packages/common-entities" }
   ]
 }
