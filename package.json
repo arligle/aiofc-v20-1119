@@ -13,7 +13,18 @@
     }
   },
   "scripts": {
-    "prepare": "husky install"
+    "prebuild": "rimraf dist ",
+    "test:all": "nx affected:test --all --codeCoverage --skip-nx-cache",
+    "prepare": "husky install",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "lint:ws-fix": "pnpm dlx sherif@latest --fix",
+    "clean": "git clean -xdf node_modules",
+    "clean-all": "pnpm run clean && pnpm recursive exec rm -rf node_modules",
+    "nx-graph": "pnpm nx dep-graph",
+    "nx-show": "pnpm nx show project adminer",
+    "affected": "nx affected --graph",
+    "affected:libs": "nx affected:libs",
+    "reinstall-all": "pnpm clean-all && rm pnpm-lock.yaml && pnpm install"
   },
   "private": true,
   "devDependencies": {
@@ -70,7 +81,11 @@
     "verdaccio": "^5.0.4",
     "webpack-cli": "^5.1.4"
   },
-"dependencies": {
+  "dependencies": {
+    "@aiofc/i18n": "workspace:*",
+    "@aiofc/exceptions": "workspace:*",
+    "@aiofc/validation": "workspace:*",
+    "@aiofc/config": "workspace:*",
     "@faker-js/faker": "^9.2.0",
     "@fastify/helmet": "^11.0.0",
     "@grpc/grpc-js": "^1.12.2",
