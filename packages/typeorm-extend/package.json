@@ -1,8 +1,7 @@
 {
-  "name": "@aiofc/typeorm-ex",
+  "name": "@aiofc/typeorm-extend",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0",
     "class-validator": "^0.14.1",
     "typeorm-naming-strategies": "^4.1.0",
     "@aiofc/validation": "workspace:*",
@@ -21,7 +20,8 @@
     "nestjs-paginate": "^9.3.1",
     "nestjs-cls": "^4.4.1",
     "typeorm-transactional": "^0.5.0",
-    "@aiofc/persistence-api": "workspace:*"
+    "@aiofc/persistence-api": "workspace:*",
+    "tslib": "^2.8.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

@@ -18,7 +18,7 @@ import {
   PasswordLocalized,
 } from '@aiofc/validation';
 import { Expose } from 'class-transformer';
-import { BaseTrackedEntityHelper } from '@aiofc/typeorm-ex';
+import { BaseTrackedEntityHelper } from '@aiofc/typeorm-extend';
 
 @Entity('user_profile')
 // TODO: 旧版本的BaseEntityHelper对应新版本的BaseTrackedEntityHelper

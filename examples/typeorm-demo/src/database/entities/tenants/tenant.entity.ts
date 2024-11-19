@@ -19,7 +19,7 @@ import {
   IsStringEnumLocalized,
   IsUUIDLocalized,
 } from '@aiofc/validation';
-import { BaseTenantEntityHelper } from '@aiofc/typeorm-ex';
+import { BaseTenantEntityHelper } from '@aiofc/typeorm-extend';
 
 @Entity('tenants')
 export class Tenant extends BaseTenantEntityHelper {

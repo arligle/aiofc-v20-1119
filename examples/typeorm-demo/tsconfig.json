@@ -10,7 +10,7 @@
     { "path": "../../packages/exceptions" },
     { "path": "../../packages/i18n" },
     { "path": "../../packages/validation" },
-    { "path": "../../packages/typeorm-ex" },
+    { "path": "../../packages/typeorm-extend" },
     { "path": "../../packages/logger" },
     { "path": "../../packages/config" },
     { "path": "../../packages/nestjs-typeorm" },

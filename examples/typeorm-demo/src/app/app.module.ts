@@ -6,7 +6,7 @@ import rootConfig from '../config/root.config';
 import { configModuleForRoot } from '@aiofc/config';
 import { Logger, loggerModuleForRootAsync } from '@aiofc/logger';
 import * as Entities from '../database/entities';
-import { typeOrmModuleForRootAsync } from '@aiofc/typeorm-ex';
+import { typeOrmModuleForRootAsync } from '@aiofc/typeorm-extend';
 import { TypeOrmModule } from '@aiofc/nestjs-typeorm';
 
 @Module({

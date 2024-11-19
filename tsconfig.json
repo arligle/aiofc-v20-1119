@@ -13,7 +13,7 @@
     { "path": "./packages/utils" },
     { "path": "./packages/common-types" },
     { "path": "./packages/persistence-api" },
-    { "path": "./packages/typeorm-ex" },
+    { "path": "./packages/typeorm-extend" },
     { "path": "./examples/fastify-server-demo" },
     { "path": "./examples/typeorm-demo" }
   ]

@@ -17,7 +17,7 @@ import {
   IsUUIDLocalized,
 } from '@aiofc/validation';
 import { Expose } from 'class-transformer';
-import { BaseTrackedEntityHelper } from '@aiofc/typeorm-ex';
+import { BaseTrackedEntityHelper } from '@aiofc/typeorm-extend';
 
 /**
  * External approval entity.

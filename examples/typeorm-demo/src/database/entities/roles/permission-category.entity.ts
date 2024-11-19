@@ -13,7 +13,7 @@ import {
   IsStringCombinedLocalized,
   IsUUIDLocalized,
 } from '@aiofc/validation';
-import { BaseTrackedEntityHelper } from '@aiofc/typeorm-ex';
+import { BaseTrackedEntityHelper } from '@aiofc/typeorm-extend';
 
 @Entity('permission_categories')
 export class PermissionCategory extends BaseTrackedEntityHelper {

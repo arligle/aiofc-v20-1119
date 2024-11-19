@@ -1,7 +1,7 @@
 {
-  "name": "typeorm-ex",
+  "name": "typeorm-extend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/typeorm-ex/src",
+  "sourceRoot": "packages/typeorm-extend/src",
   "projectType": "library",
   "release": {
     "version": {
@@ -17,11 +17,11 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/typeorm-ex",
-        "tsConfig": "packages/typeorm-ex/tsconfig.lib.json",
-        "packageJson": "packages/typeorm-ex/package.json",
-        "main": "packages/typeorm-ex/src/index.ts",
-        "assets": ["packages/typeorm-ex/*.md"]
+        "outputPath": "dist/packages/typeorm-extend",
+        "tsConfig": "packages/typeorm-extend/tsconfig.lib.json",
+        "packageJson": "packages/typeorm-extend/package.json",
+        "main": "packages/typeorm-extend/src/index.ts",
+        "assets": ["packages/typeorm-extend/*.md"]
       }
     },
     "nx-release-publish": {

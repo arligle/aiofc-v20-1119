@@ -5,7 +5,7 @@ import { TenantStatus } from '../entities/tenants/vo/tenant-status.enum';
 import { isMeta } from './utils/functions';
 import { faker } from '@faker-js/faker';
 import { ExcludeKeys } from '@aiofc/common-types';
-import { DEFAULT_CREATE_ENTITY_EXCLUDE_LIST } from '@aiofc/typeorm-ex';
+import { DEFAULT_CREATE_ENTITY_EXCLUDE_LIST } from '@aiofc/typeorm-extend';
 
 export const tenantFactory = setSeederFactory(Tenant, (_, meta) => {
   const plainTenant = {

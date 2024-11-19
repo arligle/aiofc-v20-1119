@@ -7,7 +7,7 @@
     "emitDecoratorMetadata": true,
     "target": "es2021"
   },
-  "include": ["src/**/*.ts","src/**/*.json"],
+  "include": ["src/**/*.ts", "src/**/*.json"],
   "references": [
     { "path": "../../packages/fastify-server/tsconfig.lib.json" },
     { "path": "../../packages/persistence-api/tsconfig.lib.json" },
@@ -16,7 +16,7 @@
     { "path": "../../packages/exceptions/tsconfig.lib.json" },
     { "path": "../../packages/i18n/tsconfig.lib.json" },
     { "path": "../../packages/validation/tsconfig.lib.json" },
-    { "path": "../../packages/typeorm-ex/tsconfig.lib.json" },
+    { "path": "../../packages/typeorm-extend/tsconfig.lib.json" },
     { "path": "../../packages/logger/tsconfig.lib.json" },
     { "path": "../../packages/config/tsconfig.lib.json" },
     { "path": "../../packages/nestjs-typeorm/tsconfig.lib.json" }

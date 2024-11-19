@@ -17,7 +17,7 @@ import {
   IsUUIDLocalized,
 } from '@aiofc/validation';
 import { IsOptional } from 'class-validator';
-import { BaseTrackedEntityHelper } from '@aiofc/typeorm-ex';
+import { BaseTrackedEntityHelper } from '@aiofc/typeorm-extend';
 
 @Entity('permissions')
 export class Permission extends BaseTrackedEntityHelper {
