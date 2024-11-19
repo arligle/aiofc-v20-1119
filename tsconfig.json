@@ -9,6 +9,11 @@
     { "path": "./packages/config" },
     { "path": "./packages/logger" },
     { "path": "./packages/fastify-server" },
-    { "path": "./examples/fastify-server-demo" }
+    { "path": "./examples/fastify-server-demo" },
+    { "path": "./packages/nestjs-typeorm" },
+    { "path": "./packages/utils" },
+    { "path": "./packages/common-types" },
+    { "path": "./packages/persistence-api" },
+    { "path": "./packages/typeorm-ex" }
   ]
 }
