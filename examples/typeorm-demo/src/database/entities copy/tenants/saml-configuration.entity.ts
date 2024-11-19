@@ -15,10 +15,10 @@ import {
   IsUUIDLocalized,
 } from '@aiofc/validation';
 import { Expose } from 'class-transformer';
-import { BaseTenantEntity } from '@aiofc/common-entities';
+import { BaseTenantEntityHelper } from '@aiofc/typeorm-extend';
 
 @Entity('saml_configuration')
-export class SAMLConfiguration extends BaseTenantEntity {
+export class SAMLConfiguration extends BaseTenantEntityHelper {
   @PrimaryGeneratedColumn('uuid')
   @Expose()
   @IsUUIDLocalized()

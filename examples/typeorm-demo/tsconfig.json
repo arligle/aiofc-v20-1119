@@ -3,6 +3,7 @@
   "files": [],
   "include": [],
   "references": [
+    { "path": "../../packages/common-entities" },
     { "path": "../../packages/fastify-server" },
     { "path": "../../packages/persistence-api" },
     { "path": "../../packages/common-types" },

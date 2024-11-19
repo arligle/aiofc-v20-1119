@@ -20,10 +20,10 @@ import {
 } from '@aiofc/validation';
 import { IsOptional } from 'class-validator';
 import { TenantClsStore } from '@aiofc/persistence-api';
-import { ClsPreset, TrackedEntity } from '@aiofc/common-entities';
+import { BaseTrackedEntityHelper, ClsPreset } from '@aiofc/typeorm-extend';
 
 @Entity('roles')
-export class UserRole extends TrackedEntity {
+export class UserRole extends BaseTrackedEntityHelper {
   @PrimaryGeneratedColumn('uuid')
   @Expose()
   @IsUUIDLocalized()

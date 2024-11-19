@@ -12,5 +12,8 @@ export class Doc {
     lastName: string;
 
     @Column()
+    email: string;
+
+    @Column()
     isActive: boolean;
 }

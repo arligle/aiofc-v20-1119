@@ -17,10 +17,10 @@ import {
   IsUUIDLocalized,
 } from '@aiofc/validation';
 import { IsOptional } from 'class-validator';
-import { TrackedEntity } from '@aiofc/common-entities';
+import { BaseTrackedEntityHelper } from '@aiofc/typeorm-extend';
 
 @Entity('permissions')
-export class Permission extends TrackedEntity {
+export class Permission extends BaseTrackedEntityHelper {
   @BeforeUpdate()
   @BeforeInsert()
   public beforeChange() {

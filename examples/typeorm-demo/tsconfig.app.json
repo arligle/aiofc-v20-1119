@@ -9,6 +9,7 @@
   },
   "include": ["src/**/*.ts", "src/**/*.json"],
   "references": [
+    { "path": "../../packages/common-entities/tsconfig.lib.json" },
     { "path": "../../packages/fastify-server/tsconfig.lib.json" },
     { "path": "../../packages/persistence-api/tsconfig.lib.json" },
     { "path": "../../packages/common-types/tsconfig.lib.json" },
