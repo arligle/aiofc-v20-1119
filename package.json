@@ -82,12 +82,13 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@aiofc/i18n": "workspace:*",
-    "@aiofc/exceptions": "workspace:*",
-    "@aiofc/validation": "workspace:*",
     "@aiofc/config": "workspace:*",
-    "@aiofc/logger": "workspace:*",
+    "@aiofc/exceptions": "workspace:*",
     "@aiofc/fastify-server": "workspace:*",
+    "@aiofc/i18n": "workspace:*",
+    "@aiofc/logger": "workspace:*",
+    "@aiofc/validation": "workspace:*",
+    "@aiofc/nestjs-typeorm": "workspace:*",
     "@faker-js/faker": "^9.2.0",
     "@fastify/helmet": "^11.0.0",
     "@grpc/grpc-js": "^1.12.2",
@@ -98,7 +99,6 @@
     "@nestjs/platform-express": "^10.4.8",
     "@nestjs/platform-fastify": "^10.4.8",
     "@nestjs/swagger": "^7.4.2",
-    "@nestjs/typeorm": "^10.0.2",
     "accept-language-parser": "^1.5.0",
     "argon2": "^0.41.1",
     "axios": "1.7.7",
@@ -136,7 +136,11 @@
     "typeorm-extension": "^3.6.3",
     "typeorm-naming-strategies": "^4.1.0",
     "typeorm-transactional": "^0.5.0",
+    "uuid": "11.0.2",
     "validator": "13.12.0",
     "yargs": "^17.7.2"
+  },
+  "nx": {
+    "includedScripts": []
   }
 }
