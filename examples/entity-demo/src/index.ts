@@ -1,5 +1,5 @@
-export * from './roles/permission.entity';
 export * from './roles/permission-category.entity';
+export * from './roles/permission.entity';
 export * from './roles/user-role.entity';
 export * from './tenants/saml-configuration.entity';
 export * from './tenants/tenant.entity';

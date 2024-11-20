@@ -1,0 +1,33 @@
+{
+  "name": "entity-demo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "examples/entity-demo/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/examples/entity-demo",
+        "tsConfig": "examples/entity-demo/tsconfig.lib.json",
+        "packageJson": "examples/entity-demo/package.json",
+        "main": "examples/entity-demo/src/index.ts",
+        "assets": ["examples/entity-demo/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

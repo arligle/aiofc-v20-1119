@@ -1,14 +1,13 @@
 {
-  "name": "@aiofc/common-entities",
+  "name": "@aiofc/entity-demo",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
     "typeorm": "0.3.20",
-    "@nestjs/swagger": "^7.4.2",
     "class-transformer": "^0.5.1",
-    "nestjs-cls": "^4.4.1",
-    "@nestjs/common": "^10.4.8",
-    "@aiofc/exceptions": "workspace:*"
+    "@aiofc/validation": "workspace:*",
+    "class-validator": "^0.14.1",
+    "@aiofc/common-entities": "workspace:*"
   },
   "type": "commonjs",
   "main": "./src/index.js",

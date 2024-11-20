@@ -17,7 +17,7 @@ import {
   IsUUIDLocalized,
 } from '@aiofc/validation';
 import { IsOptional } from 'class-validator';
-import { TrackedEntity } from '../../base/tracked.entity';
+import { TrackedEntity } from '@aiofc/common-entities';
 
 @Entity('permissions')
 export class Permission extends TrackedEntity {

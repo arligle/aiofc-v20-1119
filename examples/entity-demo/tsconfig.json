@@ -13,8 +13,10 @@
   "files": [],
   "include": [],
   "references": [
-    { "path": "../i18n" },
-    { "path": "../exceptions" },
+    { "path": "../../packages/common-entities" },
+    { "path": "../../packages/exceptions" },
+    { "path": "../../packages/i18n" },
+    { "path": "../../packages/validation" },
     { "path": "./tsconfig.lib.json" }
   ]
 }

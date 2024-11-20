@@ -12,7 +12,9 @@
   },
   "include": ["src/**/*.ts"],
   "references": [
-    { "path": "../i18n/tsconfig.lib.json" },
-    { "path": "../exceptions/tsconfig.lib.json" }
+    { "path": "../../packages/common-entities/tsconfig.lib.json" },
+    { "path": "../../packages/exceptions/tsconfig.lib.json" },
+    { "path": "../../packages/i18n/tsconfig.lib.json" },
+    { "path": "../../packages/validation/tsconfig.lib.json" }
   ]
 }
