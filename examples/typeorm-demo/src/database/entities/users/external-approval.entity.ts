@@ -17,7 +17,7 @@ import {
   IsUUIDLocalized,
 } from '@aiofc/validation';
 import { Expose } from 'class-transformer';
-import { BaseTrackedEntityHelper } from '@aiofc/typeorm-ex';
+import { TrackedEntity } from '@aiofc/common-entities';
 
 /**
  * External approval entity.
@@ -28,7 +28,7 @@ import { BaseTrackedEntityHelper } from '@aiofc/typeorm-ex';
  * for other cases you can use both id and code fields depends on your needs
  * */
 @Entity('external_approvals')
-export class ExternalApproval extends BaseTrackedEntityHelper {
+export class ExternalApproval extends TrackedEntity {
   @PrimaryGeneratedColumn('uuid')
   @Expose()
   @IsUUIDLocalized()

@@ -1,7 +1,9 @@
+import { TrackedEntity } from "@aiofc/common-entities";
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity('docs')
-export class Doc {
+export class Doc extends TrackedEntity
+{
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -10,9 +12,6 @@ export class Doc {
 
     @Column()
     lastName: string;
-
-    @Column()
-    email: string;
 
     @Column()
     isActive: boolean;

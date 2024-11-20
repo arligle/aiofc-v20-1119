@@ -3,7 +3,7 @@ import { UserProfile } from '../entities';
 import { plainToInstance } from 'class-transformer';
 import { UserProfileStatus } from '../entities/users/types/user-profile-status.enum';
 import { ExcludeKeys } from '@aiofc/common-types';
-import { DEFAULT_CREATE_ENTITY_EXCLUDE_LIST } from '@aiofc/typeorm-ex';
+import { DEFAULT_CREATE_ENTITY_EXCLUDE_LIST } from '@aiofc/typeorm-extend';
 
 export const userProfileFactory = setSeederFactory(
   UserProfile,

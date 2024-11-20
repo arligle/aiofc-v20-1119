@@ -7,6 +7,16 @@ import { AppConfig } from '../config/app.config';
 import { Logger } from '@aiofc/logger';
 
 export async function fastifyBootstrap(module: any) {
+  /*
+  初始化事务上下文，
+  调用 initializeTransactionalContext 必须在初始化任何应用程序上下文之前发生！
+  https://www.npmjs.com/package/typeorm-transactional#usage
+  根据官方的推荐，我们应该在在这里调用 initializeTransactionalContext() 方法，
+  以确保在应用程序启动时正确初始化事务上下文。
+  考虑到有些应用不会使用数据库，或者typeorm，所以我们把它移到Nest应用的main.ts中。
+*/
+  // initializeTransactionalContext();
+
   const app = await NestFactory.create<NestFastifyApplication>(
     module,
     createFastifyInstance(),

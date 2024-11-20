@@ -3,6 +3,7 @@
   "files": [],
   "include": [],
   "references": [
+    { "path": "../../packages/common-entities" },
     { "path": "../../packages/fastify-server" },
     { "path": "../../packages/persistence-api" },
     { "path": "../../packages/common-types" },
@@ -10,7 +11,7 @@
     { "path": "../../packages/exceptions" },
     { "path": "../../packages/i18n" },
     { "path": "../../packages/validation" },
-    { "path": "../../packages/typeorm-ex" },
+    { "path": "../../packages/typeorm-extend" },
     { "path": "../../packages/logger" },
     { "path": "../../packages/config" },
     { "path": "../../packages/nestjs-typeorm" },

@@ -1,4 +1,5 @@
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
+import { initializeTransactionalContext } from 'typeorm-transactional';
 
 @Injectable()
 export class AppService implements OnApplicationBootstrap {
@@ -12,6 +13,7 @@ export class AppService implements OnApplicationBootstrap {
     //     FROM information_schema.schemata;
     //     `)
     // );
+    initializeTransactionalContext();
   }
 
   getData(): { message: string } {

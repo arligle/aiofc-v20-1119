@@ -34,8 +34,13 @@ export class TypeOrmModule {
       exports: providers,
     };
   }
-
-  static forRootAsync(options: TypeOrmModuleAsyncOptions): DynamicModule {
+/**
+ * @description 通过异步方式初始化 TypeORM 模块，返回一个动态模块。
+ * @static
+ * @param options {TypeOrmModuleAsyncOptions} 异步初始化选项
+ * @return {*}
+ */
+static forRootAsync(options: TypeOrmModuleAsyncOptions): DynamicModule {
     return {
       module: TypeOrmModule,
       imports: [TypeOrmCoreModule.forRootAsync(options)],

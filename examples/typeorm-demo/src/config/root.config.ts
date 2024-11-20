@@ -1,7 +1,7 @@
 import { ValidateNestedProperty } from "@aiofc/config";
 import { AppConfig } from "@aiofc/fastify-server";
 import { LoggerConfig } from "@aiofc/logger";
-import { DbConfig } from "@aiofc/typeorm-ex";
+import { DbConfig } from "@aiofc/typeorm-extend";
 
 export default class RootConfig {
   @ValidateNestedProperty({ classType: AppConfig })

@@ -19,12 +19,12 @@ import {
   IsStringEnumLocalized,
   IsUUIDLocalized,
 } from '@aiofc/validation';
-import { BaseTenantEntityHelper as BaseEntity } from '@aiofc/typeorm-ex';
+import { BaseTenantEntity } from '@aiofc/common-entities';
 
 @Entity('user_tenant_accounts')
 @Index(['tenantId', 'userProfileId'])
 @Index(['tenantId', 'createdAt'])
-export class UserTenantAccount extends BaseEntity {
+export class UserTenantAccount extends BaseTenantEntity {
   @PrimaryGeneratedColumn('uuid')
   @Expose()
   @IsUUIDLocalized()

@@ -19,6 +19,7 @@
     "skipDefaultLibCheck": true,
     "paths": {
       "@aiofc/async-storage": ["packages/async-storage/src/index.ts"],
+      "@aiofc/common-entities": ["packages/common-entities/src/index.ts"],
       "@aiofc/common-types": ["packages/common-types/src/index.ts"],
       "@aiofc/config": ["packages/config/src/index.ts"],
       "@aiofc/drizzle-core": ["packages/drizzle-core/src/index.ts"],
@@ -32,7 +33,7 @@
       "@aiofc/postgres-js": ["packages/postgres-js/src/index.ts"],
       "@aiofc/service-api": ["packages/service-api/src/index.ts"],
       "@aiofc/typeorm": ["packages/typeorm/src/index.ts"],
-      "@aiofc/typeorm-ex": ["packages/typeorm-ex/src/index.ts"],
+      "@aiofc/typeorm-extend": ["packages/typeorm-extend/src/index.ts"],
       "@aiofc/utils": ["packages/utils/src/index.ts"],
       "@aiofc/validation": ["packages/validation/src/index.ts"]
     }
