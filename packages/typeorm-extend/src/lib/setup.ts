@@ -47,6 +47,7 @@ export function typeOrmModuleForRootAsync(options?: SetupTypeormOptions): Promis
       };
       // 创建一个新的数据源并初始化它
       const dataSource = new DataSource(options);
+      // 为了能够在事务中使用 TypeORM 实体，您必须首先使用 addTransactionalDataSource 函数添加数据源
       addTransactionalDataSource(dataSource);
 
     /* 这是这个函数真正要做的事情：

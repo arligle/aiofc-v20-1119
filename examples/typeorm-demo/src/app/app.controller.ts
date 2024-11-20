@@ -16,7 +16,15 @@ export class AppController {
 
   @Get()
   getData() {
+    const doc = new Doc();
+    doc.firstName = '张学友1';
+    doc.lastName = 'Jack1';
+    doc.isActive = true;
+    doc.save();
+
     const res =this.docRepository.find();
+
+    this.docRepository.insert(doc);
     return res;
 
     // return this.appService.getData();

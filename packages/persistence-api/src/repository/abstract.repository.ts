@@ -3,7 +3,21 @@ import { Never } from '@aiofc/common-types';
 // import { LimitOptions } from './vo/limit-options.interface';
 import { BaseEntity } from '../entity/base.entity';
 import { LimitOptions } from './vo/limit-options.interface';
-
+/**
+ * @description 以抽象类的形式通用的存储库形态，定义了一些通用的方法，如：
+ * upsert、create、update、updatePartial、updateByQuery、
+ * count、findAll、findAllPaginated、findById、findOne、delete、
+ * entityName、presetWhereOptions
+ * 这些方法的具体实现由继承的类来实现
+ * @export
+ * @abstract
+ * @class AbstractRepository
+ * @template ENTITY
+ * @template ID
+ * @template FIND_OPTIONS
+ * @template FIELDS_REQUIRED_FOR_UPDATE
+ * @template AUTO_GENERATED_FIELDS
+ */
 export abstract class AbstractRepository<
   ENTITY extends BaseEntity,
   ID extends keyof ENTITY,

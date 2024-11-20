@@ -16,6 +16,7 @@
     { "path": "./packages/typeorm-extend" },
     { "path": "./examples/fastify-server-demo" },
     { "path": "./examples/typeorm-demo" },
-    { "path": "./packages/common-entities" }
+    { "path": "./packages/common-entities" },
+    { "path": "./packages/service-api" }
   ]
 }

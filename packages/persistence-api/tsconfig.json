@@ -11,6 +11,7 @@
     "noPropertyAccessFromIndexSignature": true
   },
   "files": [],
+  "include": ["src/**/*.ts"],
   "references": [
     { "path": "../validation" },
     { "path": "../i18n" },

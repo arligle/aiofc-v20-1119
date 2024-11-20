@@ -7,3 +7,4 @@ export * from './users/external-approval.entity';
 export * from './users/user-profile.entity';
 export * from './users/user-tenant-account.entity';
 export * from './docs/doc.entity';
+export * from './docs/document.entity';

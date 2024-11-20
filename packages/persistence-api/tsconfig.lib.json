@@ -10,7 +10,6 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
   },
-  "include": ["src/**/*.ts"],
   "references": [
     { "path": "../validation/tsconfig.lib.json" },
     { "path": "../i18n/tsconfig.lib.json" },
