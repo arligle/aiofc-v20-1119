@@ -19,6 +19,7 @@
     { "path": "./packages/common-entities" },
     { "path": "./packages/service-api" },
     { "path": "./packages/async-storage" },
-    { "path": "./examples/entity-demo" }
+    { "path": "./examples/entity-demo" },
+    { "path": "./packages/auth" }
   ]
 }
