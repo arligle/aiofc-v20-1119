@@ -17,7 +17,7 @@ import {
   IsUUIDLocalized,
 } from '@aiofc/validation';
 import { Expose } from 'class-transformer';
-import { TrackedEntity } from '../../base/tracked-entity';
+import { TrackedEntity } from '../../base/tracked.entity';
 
 /**
  * External approval entity.

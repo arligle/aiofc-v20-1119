@@ -19,7 +19,7 @@ import {
   IsStringEnumLocalized,
   IsUUIDLocalized,
 } from '@aiofc/validation';
-import { BaseTenantEntity } from '../../base/base-tenant-entity';
+import { BaseTenantEntity } from '../../base/base-tenant.entity';
 
 @Entity('tenants')
 export class Tenant extends BaseTenantEntity {

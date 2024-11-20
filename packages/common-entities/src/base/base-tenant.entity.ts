@@ -1,12 +1,13 @@
 import { Column, Index } from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
 import { Expose } from 'class-transformer';
-import { TrackedEntity } from './tracked-entity';
+import { TrackedEntity } from './tracked.entity';
 import { ClsPreset } from '../subscribers/decorator/cls-preset.decorator';
 import { TenantClsStore } from '../decorator/vo/tenant-base-cls-store';
+import { IBaseTenantedTrackedEntity } from '../interfaces/base-tenanted-tracked-entity';
 
 export class BaseTenantEntity
-  extends TrackedEntity
+  extends TrackedEntity implements IBaseTenantedTrackedEntity
 {
   @ApiProperty({
     description: 'Tenant identifier',
@@ -20,3 +21,5 @@ export class BaseTenantEntity
   @Expose()
   tenantId!: string; // 租户ID
 }
+
+

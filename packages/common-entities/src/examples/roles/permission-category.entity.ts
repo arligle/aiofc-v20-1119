@@ -13,7 +13,7 @@ import {
   IsStringCombinedLocalized,
   IsUUIDLocalized,
 } from '@aiofc/validation';
-import { TrackedEntity } from '../../base/tracked-entity';
+import { TrackedEntity } from '../../base/tracked.entity';
 
 @Entity('permission_categories')
 export class PermissionCategory extends TrackedEntity {

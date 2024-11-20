@@ -1,6 +1,6 @@
 import { getMetadataArgsStorage } from 'typeorm';
 
-import { TrackedEntity } from '../../base/tracked-entity';
+import { TrackedEntity } from '../../base/tracked.entity';
 import { TenantClsStore } from '../../decorator/vo/tenant-base-cls-store';
 import { PresetType } from '../../decorator/vo/preset-type';
 import { defaultClsMetadataStore } from '../../decorator/cls-preset.metadata.storage';

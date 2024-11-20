@@ -15,7 +15,7 @@ import {
   IsUUIDLocalized,
 } from '@aiofc/validation';
 import { Expose } from 'class-transformer';
-import { BaseTenantEntity } from '../../base/base-tenant-entity';
+import { BaseTenantEntity } from '../../base/base-tenant.entity';
 
 @Entity('saml_configuration')
 export class SAMLConfiguration extends BaseTenantEntity {
