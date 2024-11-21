@@ -26,5 +26,6 @@
     "typecheck",
     "webp",
     "websockets"
-  ]
+  ],
+  "eslint.validate": ["json"]
 }

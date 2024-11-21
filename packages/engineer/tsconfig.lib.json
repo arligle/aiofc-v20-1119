@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": ["node", "jest"],
+  },
+  "include": ["src/**/*.ts", "src/generators/application/files/app/app.controller.ts__tmpl__"]
+}
