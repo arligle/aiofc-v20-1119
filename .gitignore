@@ -39,6 +39,8 @@ testem.log
 Thumbs.db
 
 build
+docs
+
 
 .nx/cache
 .nx/workspace-data

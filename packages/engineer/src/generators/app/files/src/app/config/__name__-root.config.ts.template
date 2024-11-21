@@ -1,0 +1,38 @@
+import { LoggerConfig } from '@aiofc/logger';
+import { AuthConfig } from '@aiofc/auth';
+import { SwaggerConfig } from '@aiofc/swagger-utils';
+import { I18Config } from '@aiofc/i18n';
+import { DbConfig } from '@aiofc/typeorm';
+import { AppConfig } from '@aiofc/bootstrap';
+import { HttpClientConfig } from '@aiofc/server-http-client';
+import { PlatformClientConfig } from '@aiofc/platform-client';
+import { HealthConfig } from '@aiofc/health-check';
+import { ValidateNestedProperty } from '@aiofc/validation';
+
+export default class <%= pascalCase(name) -%>RootConfig {
+  @ValidateNestedProperty({ classType: LoggerConfig })
+  public readonly logs!: LoggerConfig;
+<% if (auth) { %>
+  @ValidateNestedProperty({ classType: AuthConfig })
+  public readonly auth!: AuthConfig;
+<% } %>
+  @ValidateNestedProperty({ classType: AppConfig })
+  public readonly app!: AppConfig;
+
+  @ValidateNestedProperty({ classType: SwaggerConfig })
+  public readonly swagger!: SwaggerConfig;
+
+  @ValidateNestedProperty({ classType: I18Config })
+  public readonly i18!: I18Config;
+
+<% if (db) { %>
+  @ValidateNestedProperty({ classType: DbConfig })
+  public readonly db!: DbConfig;
+<% } %>
+
+<% if (health) { %>
+  @ValidateNestedProperty({ classType: HealthConfig })
+  public readonly health!: HealthConfig;
+<% } %>
+
+}
