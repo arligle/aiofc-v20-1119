@@ -8,9 +8,41 @@ import { Logger, loggerModuleForRootAsync } from '@aiofc/logger';
 import * as Entities from '../database/entities';
 import { typeOrmModuleForRootAsync } from '@aiofc/typeorm-extend';
 import { TypeOrmModule } from '@aiofc/nestjs-typeorm';
+import { ClsModule } from 'nestjs-cls';
+import { FastifyRequest } from 'fastify';
+import { SkipAuthController } from '../controllers/skip-auth.controller';
+import { AuthController } from '../controllers/auth.controller';
+import { RefreshTokenAuthController } from '../controllers/refresh-token-auth.controller';
+import { RolesController } from '../controllers/roles.controller';
+import {
+  AbstractAccessCheckService,
+  AbstractTenantResolutionService,
+  AccessGuard,
+  AuthConfig,
+  JwtAuthGuard,
+  JwtStrategy,
+  TokenAccessCheckService,
+  TokenService } from '@aiofc/auth';
+import { JwtService } from '@nestjs/jwt';
+
+import { AuthConfigMock } from '../config/auth-config.mock';
+import { APP_GUARD } from '@nestjs/core';
+import { NoOpTenantResolutionService } from '../utils/no-op-tenant-resolution-service';
 
 @Module({
   imports: [
+    ClsModule.forRoot({
+      global: true,
+      middleware: {
+        mount: true,
+        generateId: true,
+        setup: (cls, req: FastifyRequest) => {
+          // put some additional default info in the CLS
+          cls.set('requestId', req.id?.toString());
+        },
+        idGenerator: (req: FastifyRequest) => req.id.toString(),
+      },
+    }),
     loggerModuleForRootAsync(),
     configModuleForRoot(__dirname, rootConfig),
 
@@ -27,7 +59,7 @@ import { TypeOrmModule } from '@aiofc/nestjs-typeorm';
       这是一个局部配置，通常在每个需要访问这些实体的模块中执行。
 
       这两个函数的作用是互补的：
-      typeOrmModuleForRootAsync() 负责全局的数据库连接配置。
+      typeOrmModuleForRootAsync() 负责全局的数据库连接配置��
       TypeOrmModule.forFeature() 负责在特定模块中注册实体，以及操作这些实体。
       因此，它们可以一起使用而不会产生冲突,相反应该根据需要配合一起使用。
     */
@@ -35,8 +67,39 @@ import { TypeOrmModule } from '@aiofc/nestjs-typeorm';
     // 是否需要讲这些实体与数据库同步需要再配置文件.env.yaml中配置：synchronize: true
     TypeOrmModule.forFeature(Object.values(Entities)), // 局部
   ],
-  controllers: [AppController],
-  providers: [AppService, Logger],
+  controllers: [
+    SkipAuthController,
+    AuthController,
+    RefreshTokenAuthController,
+    RolesController,
+    AppController],
+  providers: [
+    AppService,
+    Logger,
+    TokenService,
+    JwtService,
+    JwtStrategy,
+    {
+      useClass: TokenAccessCheckService,
+      provide: AbstractAccessCheckService,
+    },
+    {
+      useClass: NoOpTenantResolutionService,
+      provide: AbstractTenantResolutionService,
+    },
+    {
+      useClass: AuthConfigMock,
+      provide: AuthConfig,
+    },
+    {
+      provide: APP_GUARD,
+      useClass: JwtAuthGuard,
+    },
+    {
+      provide: APP_GUARD,
+      useClass: AccessGuard,
+    },
+  ],
   // exports: [AppService],
 })
 export class AppModule { }

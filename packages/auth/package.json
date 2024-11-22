@@ -10,7 +10,10 @@
     "nestjs-cls": "^4.4.1",
     "rxjs": "^7.8.1",
     "fastify": "4.28.1",
-    "@aiofc/persistence-api": "workspace:*"
+    "@aiofc/persistence-api": "workspace:*",
+    "@nestjs/passport": "^10.0.3",
+    "passport-jwt": "^4.0.1",
+    "@nestjs/jwt": "^10.2.0"
   },
   "type": "commonjs",
   "main": "./src/index.js",
