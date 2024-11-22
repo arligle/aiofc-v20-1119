@@ -5,6 +5,7 @@
   "references": [
     { "path": "../../packages/common-entities" },
     { "path": "../../packages/fastify-server" },
+    { "path": "../../packages/auth" },
     { "path": "../../packages/persistence-api" },
     { "path": "../../packages/common-types" },
     { "path": "../../packages/utils" },
@@ -20,6 +21,7 @@
   "compilerOptions": {
     "composite": true,
     "declaration": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "sourceMap": true,
   }
 }
