@@ -10,6 +10,6 @@ export default class RootConfig {
   @ValidateNestedProperty({ classType: LoggerConfig })
   public readonly logger!: LoggerConfig;
 
-    @ValidateNestedProperty({ classType: DbConfig })
+  @ValidateNestedProperty({ classType: DbConfig })
   public readonly db!: DbConfig;
 }

@@ -21,6 +21,7 @@
     { "path": "./packages/async-storage" },
     { "path": "./examples/entity-demo" },
     { "path": "./packages/auth" },
-    { "path": "./packages/engineer" }
+    { "path": "./packages/engineer" },
+    { "path": "./examples/typeorm-auth-demo" }
   ]
 }

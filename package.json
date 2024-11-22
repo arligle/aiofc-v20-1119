@@ -86,10 +86,7 @@
   },
   "dependencies": {
     "@aiofc/async-storage": "workspace:*",
-<<<<<<< HEAD
     "@aiofc/auth": "workspace:*",
-=======
->>>>>>> origin/main
     "@aiofc/common-entities": "workspace:*",
     "@aiofc/common-types": "workspace:*",
     "@aiofc/config": "workspace:*",

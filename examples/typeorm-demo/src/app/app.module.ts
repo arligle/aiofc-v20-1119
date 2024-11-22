@@ -10,25 +10,6 @@ import { typeOrmModuleForRootAsync } from '@aiofc/typeorm-extend';
 import { TypeOrmModule } from '@aiofc/nestjs-typeorm';
 import { ClsModule } from 'nestjs-cls';
 import { FastifyRequest } from 'fastify';
-import { SkipAuthController } from '../controllers/skip-auth.controller';
-import { AuthController } from '../controllers/auth.controller';
-import { RefreshTokenAuthController } from '../controllers/refresh-token-auth.controller';
-import { RolesController } from '../controllers/roles.controller';
-import {
-  AbstractAccessCheckService,
-  AbstractTenantResolutionService,
-  AccessGuard,
-  AuthConfig,
-  JwtAuthGuard,
-  JwtStrategy,
-  TokenAccessCheckService,
-  TokenService } from '@aiofc/auth';
-import { JwtService } from '@nestjs/jwt';
-
-import { AuthConfigMock } from '../config/auth-config.mock';
-import { APP_GUARD } from '@nestjs/core';
-import { NoOpTenantResolutionService } from '../utils/no-op-tenant-resolution-service';
-
 @Module({
   imports: [
     ClsModule.forRoot({
@@ -67,39 +48,8 @@ import { NoOpTenantResolutionService } from '../utils/no-op-tenant-resolution-se
     // 是否需要讲这些实体与数据库同步需要再配置文件.env.yaml中配置：synchronize: true
     TypeOrmModule.forFeature(Object.values(Entities)), // 局部
   ],
-  controllers: [
-    SkipAuthController,
-    AuthController,
-    RefreshTokenAuthController,
-    RolesController,
-    AppController],
-  providers: [
-    AppService,
-    Logger,
-    TokenService,
-    JwtService,
-    JwtStrategy,
-    {
-      useClass: TokenAccessCheckService,
-      provide: AbstractAccessCheckService,
-    },
-    {
-      useClass: NoOpTenantResolutionService,
-      provide: AbstractTenantResolutionService,
-    },
-    {
-      useClass: AuthConfigMock,
-      provide: AuthConfig,
-    },
-    {
-      provide: APP_GUARD,
-      useClass: JwtAuthGuard,
-    },
-    {
-      provide: APP_GUARD,
-      useClass: AccessGuard,
-    },
-  ],
+  controllers: [AppController],
+  providers: [AppService, Logger],
   // exports: [AppService],
 })
-export class AppModule { }
+export class AppModule {}
