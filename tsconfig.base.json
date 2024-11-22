@@ -24,6 +24,7 @@
       "@aiofc/common-types": ["packages/common-types/src/index.ts"],
       "@aiofc/config": ["packages/config/src/index.ts"],
       "@aiofc/drizzle-core": ["packages/drizzle-core/src/index.ts"],
+      "@aiofc/engineer": ["packages/engineer/src/index.ts"],
       "@aiofc/entity-demo": ["examples/entity-demo/src/index.ts"],
       "@aiofc/exceptions": ["packages/exceptions/src/index.ts"],
       "@aiofc/fastify-server": ["packages/fastify-server/src/index.ts"],

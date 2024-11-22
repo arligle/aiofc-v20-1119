@@ -1,3 +1,5 @@
+docs
+nrwl-nx/nest
 examples/fastify-server-demo
-# examples/typeorm-demo
 examples/entity-demo
+# examples/typeorm-demo
