@@ -19,7 +19,7 @@ import {
   IsStringEnumLocalized,
   IsUUIDLocalized,
 } from '@aiofc/validation';
-import { BaseTenantEntity } from '@aiofc/common-entities';
+import { BaseTenantEntity } from '@aiofc/typeorm';
 
 @Entity('user_tenant_accounts')
 @Index(['tenantId', 'userProfileId'])

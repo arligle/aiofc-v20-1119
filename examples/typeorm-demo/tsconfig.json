@@ -3,18 +3,19 @@
   "files": [],
   "include": [],
   "references": [
-    { "path": "../../packages/common-entities" },
+    { "path": "../../packages/typeorm" },
     { "path": "../../packages/fastify-server" },
     { "path": "../../packages/persistence-api" },
+    { "path": "../../packages/persistence-base" },
     { "path": "../../packages/common-types" },
     { "path": "../../packages/utils" },
+    { "path": "../../packages/nestjs-typeorm" },
     { "path": "../../packages/exceptions" },
     { "path": "../../packages/i18n" },
     { "path": "../../packages/validation" },
     { "path": "../../packages/typeorm-extend" },
     { "path": "../../packages/logger" },
     { "path": "../../packages/config" },
-    { "path": "../../packages/nestjs-typeorm" },
     { "path": "./tsconfig.app.json" }
   ],
   "compilerOptions": {

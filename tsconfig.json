@@ -12,16 +12,15 @@
     { "path": "./packages/nestjs-typeorm" },
     { "path": "./packages/utils" },
     { "path": "./packages/common-types" },
-    { "path": "./packages/persistence-api" },
-    { "path": "./packages/typeorm-extend" },
     { "path": "./examples/fastify-server-demo" },
     { "path": "./examples/typeorm-demo" },
-    { "path": "./packages/common-entities" },
     { "path": "./packages/service-api" },
     { "path": "./packages/async-storage" },
     { "path": "./examples/entity-demo" },
     { "path": "./packages/auth" },
     { "path": "./packages/engineer" },
-    { "path": "./examples/typeorm-auth-demo" }
+    { "path": "./examples/typeorm-auth-demo" },
+    { "path": "./packages/persistence-base" },
+    { "path": "./packages/typeorm" }
   ]
 }

@@ -10,6 +10,7 @@ import { typeOrmModuleForRootAsync } from '@aiofc/typeorm-extend';
 import { TypeOrmModule } from '@aiofc/nestjs-typeorm';
 import { ClsModule } from 'nestjs-cls';
 import { FastifyRequest } from 'fastify';
+import { DocRepository } from '../repositories/doc.repository';
 @Module({
   imports: [
     ClsModule.forRoot({
@@ -49,7 +50,11 @@ import { FastifyRequest } from 'fastify';
     TypeOrmModule.forFeature(Object.values(Entities)), // 局部
   ],
   controllers: [AppController],
-  providers: [AppService, Logger],
+  providers: [
+    AppService,
+    Logger,
+    DocRepository,
+  ],
   // exports: [AppService],
 })
 export class AppModule {}

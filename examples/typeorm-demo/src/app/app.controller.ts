@@ -1,30 +1,29 @@
 import { Controller, Get } from '@nestjs/common';
 
 import { AppService } from './app.service';
-import { Repository } from 'typeorm';
-import { Doc } from '../database/entities';
-import { InjectRepository } from '@aiofc/nestjs-typeorm';
+import { DocRepository } from '../repositories/doc.repository';
 
 @Controller()
 export class AppController {
   constructor(
 
     private readonly appService: AppService,
-    @InjectRepository(Doc)
-    private docRepository: Repository<Doc>,
+    private readonly docRepository: DocRepository,
+    // @InjectRepository(Doc)
+    // private docRepository: AbstractRepository<Doc,'id',any>,
   ) {}
 
   @Get()
   getData() {
-    const doc = new Doc();
-    doc.firstName = '张学友1';
-    doc.lastName = 'Jack1';
-    doc.isActive = true;
-    doc.save();
+    // const doc = new Doc();
+    // doc.firstName = '张学友1';
+    // doc.lastName = 'Jack1';
+    // doc.isActive = true;
+    // doc.save();
 
-    const res =this.docRepository.find();
+    const res =this.docRepository.findAll();
 
-    this.docRepository.insert(doc);
+    // this.docRepository.insert(doc);
     return res;
 
     // return this.appService.getData();

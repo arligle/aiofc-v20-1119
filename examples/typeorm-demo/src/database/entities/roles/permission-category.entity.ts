@@ -13,10 +13,10 @@ import {
   IsStringCombinedLocalized,
   IsUUIDLocalized,
 } from '@aiofc/validation';
-import { TrackedEntity } from '@aiofc/common-entities';
+import { BaseTrackedEntity } from '@aiofc/persistence-base';
 
 @Entity('permission_categories')
-export class PermissionCategory extends TrackedEntity {
+export class PermissionCategory extends BaseTrackedEntity {
   @PrimaryGeneratedColumn('uuid')
   @Expose()
   @IsUUIDLocalized()

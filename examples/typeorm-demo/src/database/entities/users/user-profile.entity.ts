@@ -18,11 +18,11 @@ import {
   PasswordLocalized,
 } from '@aiofc/validation';
 import { Expose } from 'class-transformer';
-import { TrackedEntity } from '@aiofc/common-entities';
+import { AbstractBaseTrackedEntity } from '@aiofc/typeorm';
 
 @Entity('user_profile')
 // TODO: 旧版本的BaseEntityHelper对应新版本的BaseTrackedEntityHelper
-export class UserProfile extends TrackedEntity {
+export class UserProfile extends AbstractBaseTrackedEntity {
   @PrimaryGeneratedColumn('uuid')
   @Expose()
   @IsUUIDLocalized()

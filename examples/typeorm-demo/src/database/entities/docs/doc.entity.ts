@@ -1,8 +1,8 @@
-import { TrackedEntity } from "@aiofc/common-entities";
+import { AbstractBaseTrackedEntity } from "@aiofc/typeorm";
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity('docs')
-export class Doc extends TrackedEntity
+export class Doc extends AbstractBaseTrackedEntity
 {
     @PrimaryGeneratedColumn()
     id: number;

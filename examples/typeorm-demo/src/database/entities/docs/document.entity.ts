@@ -1,4 +1,4 @@
-import { BaseTenantEntity } from "@aiofc/common-entities";
+import { BaseTenantEntity } from "@aiofc/typeorm";
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity('documents')
